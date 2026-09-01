@@ -6,7 +6,7 @@ import os
 def get_fx_rate(target: str):
     """
     Fetches the current exchange rate between two currencies. The base currency is USD and cannot be changed.
-
+    
     Args:
                 target: The target currency (e.g., "JPY").
     Returns:
@@ -15,7 +15,7 @@ def get_fx_rate(target: str):
     """
     api_key = os.getenv("CF_API_KEY")
     api_url = f"https://api.currencyfreaks.com/v2.0/rates/latest?apikey={api_key}&symbols={target}"
-
+  
     response = requests.get(api_url)
     if response.status_code == 200:
         return response.json()
