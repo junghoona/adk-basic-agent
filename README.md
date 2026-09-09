@@ -1,9 +1,10 @@
 # adk-basic-agent
 
-> **⚠️ Work in progress.** This is an active coursework project built up lab by
-> lab. The agent runs, but interfaces, tooling, and structure are still
-> changing between commits, and several rough edges are known and unfixed —
-> see [Known issues](#known-issues). Don't treat this as a stable reference.
+> **Work in progress.** This project builds on the starter project explored in the MongoDB Agentic AI workshop using ADK from MongoDB Build Fest.
+> This is an active project being built up.
+> The agent runs, but interfaces, tooling, and structure are still
+> changing between commits.
+
 
 A [Google Agent Development Kit (ADK)](https://google.github.io/adk-docs/)
 agent that answers questions and reaches for external tools when it needs live
@@ -70,10 +71,7 @@ The direct dependencies are `google-adk`, `google-genai`, `requests`, and
 `python-dotenv`.
 
 > **Note on `mcp`:** `google-adk` does **not** install the `mcp` package by
-> default — it's an optional extra, and without it [`agent.py`](src/basic_agent/agent.py)
-> fails at import with `ModuleNotFoundError: No module named 'mcp'`. The freeze
-> pins `mcp==1.29.1` directly, so installing from `requirements.txt` covers it.
-> If you ever install ADK by hand, use `pip install "google-adk[mcp]"`.
+> default — If you ever install ADK by hand, use `pip install "google-adk[mcp]"`.
 
 **3. Create `src/basic_agent/.env`** with the following keys. ADK loads this
 file for you at startup; `.gitignore` already excludes it.
@@ -124,8 +122,6 @@ What's the exchange rate for JPY?
 Who won the most recent Formula 1 race?
 Connect to my Atlas cluster and list the databases.
 ```
-
-The model picks the tool — you never name one explicitly.
 
 ## MongoDB Atlas MCP setup
 
