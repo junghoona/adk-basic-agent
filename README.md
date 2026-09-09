@@ -33,6 +33,11 @@ adk-basic-agent/
         ├── custom_functions.py  get_fx_rate()
         ├── .env                 secrets (gitignored, not committed)
         └── .gitignore           excludes .env and .adk/
+    └── utils/
+        ├── __init__.py          
+        ├── config.py            
+        └── logger.py     
+
 ```
 
 `src/basic_agent/` is the agent folder — the thing you point `adk` at. ADK finds
