@@ -1,1 +1,1 @@
-from ...basic_agent import agent
+from . import agent
